@@ -39,7 +39,7 @@
             @endif
                 <div class="col-md-4">
                   @if(isset($FeaturedService))
-                    <img id="output" class="img-responsive" src="/storage/images/services/{{$FeaturedService->image}}" style="width:100%;height: 300px;" >
+                    <img id="output" class="img-responsive" src="/images/services/{{$FeaturedService->image}}" style="width:100%;height: 300px;" >
                     <div class="photo_post">
                       {{Form::file('image', ['class'=>'file', 'id'=>'f02','placeholder'=>'Insert Image', 'onchange'=>'loadFile(event)'])}}
                       {!! Form::label('f02', 'Change Image') !!}
@@ -101,7 +101,7 @@
              <div class="our-team-main">
              
                   <div class="team-front">
-                       <img src="/storage/images/services/{{$FeaturedService->image}}" class="img-fluid" />
+                       <img src="/images/services/{{$FeaturedService->image}}" class="img-fluid" />
                        <h3>{{$FeaturedService->title}}</h3>
                   </div>
                   

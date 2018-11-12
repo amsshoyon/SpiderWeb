@@ -34,3 +34,9 @@ p{
 .padding{
   padding: 30px;
 }
+.font_bold{
+  font-weight: 700!important;
+}
+.text_white{
+  color: #fff!important;
+}

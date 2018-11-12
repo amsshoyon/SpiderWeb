@@ -18,7 +18,6 @@ class CreateFeaturedServicesTable extends Migration
              $table->string('image');
              $table->string('title');
              $table->text('description')->nullable();
-             $table->string('size');
              $table->timestamps();
         });
     }

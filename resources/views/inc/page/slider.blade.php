@@ -28,7 +28,7 @@
 					}
 				@endphp
 				<div class="item {{$slider_active}}">
-					<img src="/storage/images/slider/{{$Slider->image}}" alt="{{$Slider->title}}" style="max-height: 600px;">
+					<img src="/images/slider/{{$Slider->image}}" alt="{{$Slider->title}}" style="max-height: 600px;">
 				   <div class="carousel-caption">
 						<div class="wow fadeInUp text-center" data-wow-offset="0" data-wow-delay="1.0s">								
 							<h2>{{$Slider->title}}</h2>

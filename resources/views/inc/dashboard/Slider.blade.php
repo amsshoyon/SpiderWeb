@@ -39,7 +39,7 @@
             @endif
                 <div class="col-md-4">
                   @if(isset($slider))
-                    <img id="output" class="img-responsive" src="/storage/images/slider/{{$slider->image}}" style="width:100%;height: 300px;" >
+                    <img id="output" class="img-responsive" src="/images/slider/{{$slider->image}}" style="width:100%;height: 300px;" >
                     <div class="photo_post">
                       {{Form::file('image', ['class'=>'file', 'id'=>'f02','placeholder'=>'Insert Image', 'onchange'=>'loadFile(event)'])}}
                       {!! Form::label('f02', 'Change Image') !!}
@@ -110,7 +110,7 @@
 
           <div class="col-md-3">
             <div class="hovereffect">
-                <img class="img-responsive" src="/storage/images/slider/{{$slider->image}}" alt="" style="width:100%;">
+                <img class="img-responsive" src="/images/slider/{{$slider->image}}" alt="" style="width:100%;">
                 <div class="overlay">
                   <h2 class="text-white">{{$slider->title}}</h2>
                   <h4 class="text-white">{{$slider->description}}</h4>

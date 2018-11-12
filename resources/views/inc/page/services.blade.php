@@ -38,7 +38,7 @@
                     </div>
                     <div class="col-sm-12 col-md-5">
                       <div class="screenshot wow bounceInRight">
-                        <img src="/storage/images/services/{{$Service->image}}" class="img-responsive" alt="" />
+                        <img src="/images/services/{{$Service->image}}" class="img-responsive" alt="" />
                       </div>
                     </div>
                   </div>

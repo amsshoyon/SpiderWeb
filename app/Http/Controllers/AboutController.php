@@ -2,9 +2,9 @@
 
 namespace App\Http\Controllers;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
 use App\About;
 use App\Http\Requests\AboutRequest;
+use File;
 
 
 class AboutController extends Controller
@@ -82,9 +82,12 @@ class AboutController extends Controller
 
         if ($request->hasFile('image')) {
 
-            Storage::delete('storage/images/about/'.$update->image);
+            if(file_exists(public_path('/images/about/'.$update->image))){
+                File::delete('/images/about/'.$update->image);
+            }
+
             $image_name = time().'.'.$request->image->getClientOriginalExtension();
-            $path= $request->file('image')->storeAs('public/images/about/', $image_name);
+            $path= $request->file('image')->move(public_path('/images/about'), $image_name);
             $update->image = $image_name;
 
         }   

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use File;
 use App\OfferedServices;
 use App\Http\Requests\OfferedServicesRequest;
 
@@ -46,13 +46,10 @@ class OfferedServicesController extends Controller
         $image_name = time().'.'.$request->image->getClientOriginalExtension();
 
         // Uplaod image
-        $path= $request->file('image')->storeAs('public/images/services/', $image_name);
-
-        // Upload Photo
+        $path= $request->file('image')->move(public_path('/images/services'), $image_name);
         $store = new OfferedServices;
         $store->title = $request->input('title');
         $store->description = $request->input('description');
-        $store->size = $request->file('image')->getClientSize();
         $store->image = $image_name;
 
         $store->save();
@@ -97,9 +94,12 @@ class OfferedServicesController extends Controller
 
         if ($request->hasFile('image')) {
 
-            //Storage::delete('public/images/services/'.$update->image);
+            if(file_exists(public_path('/images/services/'.$update->image))){
+                File::delete('/images/services/'.$update->image);
+            }
+
             $image_name = time().'.'.$request->image->getClientOriginalExtension();
-            $path= $request->file('image')->storeAs('public/images/services/', $image_name);
+            $path= $request->file('image')->move(public_path('/images/services'), $image_name);
             $update->image = $image_name;
 
         }   
@@ -120,9 +120,9 @@ class OfferedServicesController extends Controller
     {
         $image = OfferedServices::find($id);
 
-        if(Storage::delete('public/images/services/'.$image->image)){
+        if(unlink(public_path('/images/services/'.$image->image))){
             $image->delete();
-            return redirect('/Dashboard/OfferedServices')->with('success', 'Service Deleted');
+            return back()->with('success', 'Slider Image Deleted');
         }
     }
 }

@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use File;
 use App\Works;
 use App\Http\Requests\WorksRequest;
 
@@ -46,14 +46,12 @@ class WorksController extends Controller
         $image_name = time().'.'.$request->image->getClientOriginalExtension();
 
         // Uplaod image
-        $path= $request->file('image')->storeAs('public/images/works/', $image_name);
+        $path= $request->file('image')->move(public_path('/images/works'), $image_name);
 
-        // Upload Photo
         $store = new Works;
         $store->title = $request->input('title');
         $store->catagory = $request->input('catagory');
         $store->description = $request->input('description');
-        $store->size = $request->file('image')->getClientSize();
         $store->image = $image_name;
 
         $store->save();
@@ -97,12 +95,15 @@ class WorksController extends Controller
         $update = Works::findOrFail($id);
         if ($request->hasFile('image')) {
 
-            //Storage::delete('public/images/services/'.$update->image);
+            if(file_exists(public_path('/images/works/'.$update->image))){
+                File::delete('/images/works/'.$update->image);
+            }
+
             $image_name = time().'.'.$request->image->getClientOriginalExtension();
-            $path= $request->file('image')->storeAs('public/images/works/', $image_name);
+            $path= $request->file('image')->move(public_path('/images/works'), $image_name);
             $update->image = $image_name;
 
-        }   
+        }
         $update->title = $request['title'];
         $update->description = $request['description'];
 
@@ -119,9 +120,9 @@ class WorksController extends Controller
     public function destroy($id)
     {
         $image = Works::find($id);
-        if(Storage::delete('public/images/works/'.$image->image)){
+        if(unlink(public_path('/images/works/'.$image->image))){
             $image->delete();
-            return redirect('/Dashboard/Works')->with('success', 'Work Deleted');
+            return back()->with('success', 'Work Deleted');
         }
     }
 }

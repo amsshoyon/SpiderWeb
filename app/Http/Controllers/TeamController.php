@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use File;
 use App\Team;
 use App\Http\Requests\TeamRequest;
 
@@ -46,7 +46,7 @@ class TeamController extends Controller
         $image_name = time().'.'.$request->image->getClientOriginalExtension();
 
         // Uplaod image
-        $path= $request->file('image')->storeAs('public/images/team/', $image_name);
+        $path= $request->file('image')->move(public_path('/images/team'), $image_name);
 
         // Upload Photo
         $store = new Team;
@@ -56,7 +56,6 @@ class TeamController extends Controller
         $store->twitter_link = $request->input('twitter_link');
         $store->google_link = $request->input('google_link');
         $store->linkedin_link = $request->input('linkedin_link');
-        $store->size = $request->file('image')->getClientSize();
         $store->image = $image_name;
 
         $store->save();
@@ -101,12 +100,15 @@ class TeamController extends Controller
 
         if ($request->hasFile('image')) {
 
-            //Storage::delete('public/images/services/'.$update->image);
+            if(file_exists(public_path('/images/team/'.$update->image))){
+                File::delete('/images/team/'.$update->image);
+            }
+
             $image_name = time().'.'.$request->image->getClientOriginalExtension();
-            $path= $request->file('image')->storeAs('public/images/team/', $image_name);
+            $path= $request->file('image')->move(public_path('/images/team'), $image_name);
             $update->image = $image_name;
 
-        }   
+        }  
         $update->name = $request['name'];
         $update->designation = $request['designation'];
         $update->fb_link = $request['fb_link'];
@@ -128,9 +130,9 @@ class TeamController extends Controller
     {
         $image = Team::find($id);
 
-        if(Storage::delete('public/images/team/'.$image->image)){
+        if(unlink(public_path('/images/team/'.$image->image))){
             $image->delete();
-            return redirect('/Dashboard/Team')->with('success', 'Member Deleted');
+            return back()->with('success', 'Slider Image Deleted');
         }
     }
 }

@@ -19,7 +19,6 @@ class CreateWorksTable extends Migration
              $table->string('title');
              $table->string('catagory');
              $table->text('description')->nullable();
-             $table->string('size');
              $table->timestamps();
         });
     }

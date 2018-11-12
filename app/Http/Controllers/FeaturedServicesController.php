@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use File;
 use App\FeaturedServices;
 use App\Http\Requests\FeaturedServicesRequest;
 
@@ -46,13 +46,11 @@ class FeaturedServicesController extends Controller
          $image_name = time().'.'.$request->image->getClientOriginalExtension();
 
          // Uplaod image
-         $path= $request->file('image')->storeAs('public/images/services/', $image_name);
+         $path= $request->file('image')->move(public_path('/images/services'), $image_name);
 
-         // Upload Photo
          $store = new FeaturedServices;
          $store->title = $request->input('title');
          $store->description = $request->input('description');
-         $store->size = $request->file('image')->getClientSize();
          $store->image = $image_name;
 
          $store->save();
@@ -94,15 +92,18 @@ class FeaturedServicesController extends Controller
     public function update(Request $request, $id)
     {
         $update = FeaturedServices::findOrFail($id);
-
+  
         if ($request->hasFile('image')) {
 
-            //Storage::delete('public/images/services/'.$update->image);
+            if(file_exists(public_path('/images/services/'.$update->image))){
+                File::delete('/images/services/'.$update->image);
+            }
+
             $image_name = time().'.'.$request->image->getClientOriginalExtension();
-            $path= $request->file('image')->storeAs('public/images/services/', $image_name);
+            $path= $request->file('image')->move(public_path('/images/services'), $image_name);
             $update->image = $image_name;
 
-        }   
+        }  
         $update->title = $request['title'];
         $update->description = $request['description'];
 
@@ -120,9 +121,9 @@ class FeaturedServicesController extends Controller
     {
         $image = FeaturedServices::find($id);
 
-        if(Storage::delete('public/images/services/'.$image->image)){
+        if(unlink(public_path('/images/services/'.$image->image))){
             $image->delete();
-            return redirect('/Dashboard/FeaturedServices')->with('success', 'Service Deleted');
+            return back()->with('success', 'Service Deleted');
         }
     }
 }

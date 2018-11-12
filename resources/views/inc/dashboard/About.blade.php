@@ -34,7 +34,7 @@
                     @if($about->image == '')
                         <img id="output" class="img-responsive" src="/images/bg/bg-3.jpg" style="width:100%;height: 300px;" >
                     @else
-                        <img id="output" class="img-responsive" src="/storage/images/about/{{$about->image}}" style="width:100%;height: 300px;"  >
+                        <img id="output" class="img-responsive" src="/images/about/{{$about->image}}" style="width:100%;height: 300px;"  >
                     @endif
                     <div class="photo_post">
                       {{Form::file('image', ['class'=>'file', 'id'=>'f02','placeholder'=>'Insert Image', 'onchange'=>'loadFile(event)'])}}

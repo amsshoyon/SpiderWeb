@@ -22,7 +22,6 @@ class CreateTeamsTable extends Migration
              $table->text('twitter_link')->nullable();
              $table->text('google_link')->nullable();
              $table->text('linkedin_link')->nullable();
-             $table->string('size');
              $table->timestamps();
         });
     }

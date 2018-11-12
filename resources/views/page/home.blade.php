@@ -19,7 +19,7 @@
 
 		      <div class="row wow fadeInUp padding">
 		        <div class="col-md-6">
-		          <img class="img-responsive" src="/storage/images/about/{{$About->image}}" alt="" style="width: 100%;">
+		          <img class="img-responsive" src="/images/about/{{$About->image}}" alt="" style="width: 100%;">
 		        </div>
 
 		        <div class="col-md-6">
@@ -37,8 +37,8 @@
 	    <div class="container">
 	      <div class="row padding">
 	          <div class="padding  text-center">
-	            <h1 class="wow bounceInDown font-bold text-white" data-wow-delay="0.5s">Details are the key for perfection</h1>
-	            <h3 class="lead wow bounceInUp font-bold text-white" data-wow-delay="1s">We mix all detailed things together</h3>
+	            <h1 class="wow bounceInDown font_bold text_white" data-wow-delay="0.5s">Details are the key for perfection</h1>
+	            <h3 class="lead wow bounceInUp font_bold text_white" data-wow-delay="1s">We mix all detailed things together</h3>
 	          </div>
 	      </div>
 	    </div>

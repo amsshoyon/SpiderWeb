@@ -14,7 +14,7 @@ class DatabaseSeeder extends Seeder
         $admin = DB::table('users')->insert([
 			'username'   => 'ashoyon',                 //default username
 			'user_type'   => '1',                      //2 for superadmin	
-			'email'      => 'hellowspider@gmail.com',     //default email
+			'email'      => 'amsshoyon@gmail.com',     //default email
 			'password'   => Hash::make('123456'),      //default password
 			'name' => 'Abdullah Al Mamun',
 			'phone'  => '',
