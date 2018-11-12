@@ -98,11 +98,15 @@ Route::post('/Dashboard/FeaturedServices', 'FeaturedServicesController@store');
 Route::delete('/Dashboard/FeaturedServices/{id}', 'FeaturedServicesController@destroy');
 
 //Dashboard Work Section
-Route::resource('/Dashboard/Works', 'WorksController');
+// Route::resource('/Dashboard/Works', 'WorksController');
 
-Route::post('/Dashboard/Works', 'WorksController@store');
+// Route::post('/Dashboard/Works', 'WorksController@store');
 
-Route::delete('/Dashboard/Works/{id}', 'WorksController@destroy');
+// Route::delete('/Dashboard/Works/{id}', 'WorksController@destroy');
+Route::resource('/Dashboard/Portfolio', 'PortfolioController');
+
+Route::resource('/Dashboard/Catagory', 'CatagoryController');
+Route::resource('/Dashboard/Image', 'ImageController');
 
 //Dashboard Team Section
 Route::resource('/Dashboard/Team', 'TeamController');

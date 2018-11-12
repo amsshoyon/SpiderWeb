@@ -1,215 +1,42 @@
-<section id="" class="margin-top">
-    <div class="container">
-        <div class="row">
-          <div class="col-md-offset-2 col-md-8">
-            <div class="text-center">
-              <h1 class="font-bold">- Our <span class="text-green">Works</span> -</h1>
-              <hr>
-              <p class="text-center">We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="row padding margin-bottom">
-
-              <ul class="nav nav-tabs">
-                <li class="active"><a data-toggle="tab" href="#all">All Works</a></li>
-                <li><a data-toggle="tab" href="#Educational">Educational</a></li>
-                <li><a data-toggle="tab" href="#E-commerce">E-commerce</a></li>
-                <li><a data-toggle="tab" href="#Company">Company</a></li>
-                <li><a data-toggle="tab" href="#Personal">Personal</a></li>
-                <li><a data-toggle="tab" href="#Business">Business</a></li>
-                <li><a data-toggle="tab" href="#Information">Information</a></li>
-              </ul>
-
-              <div class="tab-content">
-
-                <div id="all" class="tab-pane fade in active">
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/1.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Name</h2>
-                                <p class="text-center" >
-                                  <a href="/Details">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/2.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                </div>
-
-                <div id="Educational" class="tab-pane fade">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/3.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/4.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-                </div>
-
-                <div id="E-commerce" class="tab-pane fade">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/1.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/3.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-                </div>
-                <div id="Company" class="tab-pane fade">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/1.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/5.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-                </div>
-                <div id="Personal" class="tab-pane fade">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/3.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/4.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-                </div>
-                <div id="Business" class="tab-pane fade">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/2.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/5.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-                </div>
-                <div id="Information" class="tab-pane fade">
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/5.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-
-                        <div class="col-lg-4 col-md-4 col-sm-6 col-xxs-12">
-                            <div class="hovereffect">
-                                <img class="img-responsive" src="images/works/3.jpg" alt="" style="width:100%;">
-                                    <div class="overlay">
-                                        <h2>Nmae</h2>
-                                <p class="text-center" >
-                                  <a href="">View Details</a>
-                                </p>
-                                    </div>
-                            </div>
-                        </div>
-                </div>
 
 
-              </div>
+<section class="portfolio_section" id="portfolio">
 
-
-        </div>
-
+    <div class="text-center container">
+        <h1 class="section_title"><span class="section_title_begain font_green">A</span>ll Of My <span class="section_title_begain font_green">W</span>orks</h1>
+        <hr class="colorgraph">
     </div>
-</section>
 
+     <div class="container text-center py-3 hidden_small">
+        <button class="btn btn-outline-primary filter-button btn-primary" data-filter="all">All</button>
+        @foreach($CatagoryList as $Catagory)
+            <button class="btn btn-outline-primary filter-button" data-filter="{{$Catagory->name}}">{{$Catagory->name}}</button>
+        @endforeach
+    </div>
+
+    <div class="container">
+      <div class="row">
+        @foreach($Portfolios as $Portfolio)
+        <div class="portfolio pb-2 col-md-4 col-sm-6 col-xs-12 filter {{$Portfolio->catagory->name}}">
+            <div class="box21" style="overflow: hidden;">
+                <img src="/images/portfolio/cover/{{$Portfolio->cover}}" alt="">
+                <div class="box-content">
+                    <h4 class="title">{{$Portfolio->title}}</h4>
+                    <p class="description text-center">{{$Portfolio->description}}</p>
+                    @if($Portfolio->link)
+                    <a class="read-more" href="{{$Portfolio->link}}" target="_blank">Live Preview</a>
+                    @else
+                    {{link_to_route('Portfolio.show',"Screenshoots",[$Portfolio->id],['class'=>'read-more'])}}
+                    @endif
+                </div>
+            </div>
+        </div>
+        @endforeach
+
+
+
+        
+    </div>
+    </div>
+
+</section>

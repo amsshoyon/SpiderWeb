@@ -4,9 +4,12 @@ namespace App\Http\Controllers;
 
 use View;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\Storage;
+use File;
 use App\Slider;
 use App\About;
+use App\Catagory;
+use App\Image; 
+use App\Portfolio;
 use App\FeaturedServices;
 
 class HomeController extends Controller
@@ -24,10 +27,15 @@ class HomeController extends Controller
      */
     public function homepage() {
 
-        return View::make('page.home')
-            ->with('Sliders', Slider::all())
-            ->with('About', About::find(1))
-            ->with('Services', FeaturedServices::all()); 
+        $Portfolios = Portfolio::with('catagory')->get();
+        $CatagoryList = Catagory::get();
+        $Sliders = Slider::get();
+        $About = About::first();
+        $Services = FeaturedServices::get();
+
+        return view('page.home')->with(compact('Portfolios','CatagoryList','Sliders','About', 'Services'));
+
+
 
     }
 }

@@ -5,35 +5,6 @@
                
             <li class="top-nav-list"><a href="../" target="_blank">Visit Page</a></li>
 
-            <!--li class="top-nav-list dropdown hidden-xs">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                    <i class="notif glyphicon glyphicon-envelope"><span class="msg_num">5</span></i>
-                    
-                </a>
-
-                <ul class="dropdown-menu dropdown-menu-right list-group" role="menu" style="width:500px;margin-top: 10px;">
-                    <li class="dropdown-header center list-group-item active">Recent Messages</li>
-                    <li class="divider"></li> 
-                
-
-                  
-                    <li class="divider"></li> 
-                    <li class="pull-right"><a href="inbox.php">View All</a></li>
-                </ul>
-            </li>
-
-            <li class="top-nav-list dropdown">
-                <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="glyphicon glyphicon-user"></i><span class="caret"></span></a>
-                <ul class="dropdown-menu  dropdown-menu-right" role="menu">
-                    <li class="dropdown-header center">name</li>
-                    <li class="divider"></li> 
-                    <li class=""><a href="/Dashboard/Profile">Profile</a></li>
-                    <li class=""><a href="/Dashboard/Security">Security</a></li>
-                    <li class="divider"></li> 
-                    <li><a href="logout.php">Logout</a></li>
-                </ul>
-            </li-->
-
         </ul>
     </div>
 
@@ -124,10 +95,11 @@
                                     <li><a href="/Dashboard/OfferedServices">Offered Services</a></li>
                                     <li><a href="/Dashboard/FeaturedServices">Featured Services</a></li>
                                     <li><a href="/Dashboard/Features">Features</a></li>
-                                    <li><a href="/Dashboard/Works">Works</a></li>
+                                    <li><a href="/Dashboard/Portfolio">Portfolio</a></li>
                                     <li><a href="/Dashboard/Thought">Thought</a></li>
                                     <li><a href="/Dashboard/Clients">Clients</a></li>
                                     <li><a href="/Dashboard/Team">Team</a></li>
+                                    <li><a href="/Dashboard/Catagory">Catagory</a></li>
                                     <li class="divider"></li>
                                     <li><a href="../">Visit Page</a></li>
                                 </ul>
@@ -183,10 +155,7 @@
                     <i class="fa fa-envelope"></i>
                     <span class="badge badge-pill badge-success notification">7</span>
                 </a>
-                <!--a href="#">               <!-- Setting  -->
-                    <!--i class="fa fa-cog"></i>
-                    <span class="badge-sonar"></span>
-                </a-->
+
                 <a href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                     <i class="fa fa-power-off"></i>
                 </a>
@@ -195,56 +164,10 @@
                 </form>
             </div>
         </nav>
-        <!-- sidebar-wrapper  -->
-<!--nav class="navbar navbar-inverse sidebar" role="navigation">
-    <div class="container-fluid">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-sidebar-navbar-collapse-1">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-            <a class="navbar-brand" href="#"><img src="/images/logo/spiderweb_logo.png" style="width: 170px; margin-top: -15px;"></a>
-        </div>
-        
-        <div class="collapse navbar-collapse" id="bs-sidebar-navbar-collapse-1">
-            <ul class="nav navbar-nav">
-                <li class="active"><a href="/Dashboard">Dashboard<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-home"></span></a></li>
-                <li ><a href="/Profile">Profile<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-user"></span></a></li>
-                <li ><a href="/Messages">Messages<span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-envelope"></span></a></li>
-                
-                <li class="dropdown active open">
-                    <a href="#" class="dropdown-toggle open" data-toggle="dropdown">Page Elements <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
-                    <ul class="dropdown-menu forAnimate " role="menu">
-                        <li><a href="/Dashboard/Slider">Slider Images</a></li>
-                        <li><a href="/Dashboard/About">About</a></li>
-                        <li><a href="/Dashboard/Mission">Mission</a></li>
-                        <li><a href="/Dashboard/Vission">Vission</a></li>
-                        <li><a href="/Dashboard/Services">Services</a></li>
-                        <li><a href="/Dashboard/Features">Features</a></li>
-                        <li><a href="/Dashboard/Works">Works</a></li>
-                        <li><a href="/Dashboard/Thought">Thought</a></li>
-                        <li><a href="/Dashboard/Clients">Clients</a></li>
-                        <li><a href="/Dashboard/team">Team</a></li>
-                        <li class="divider"></li>
-                        <li><a href="../">Visit Page</a></li>
-                        
-                        
-                    </ul>
-                </li>
-                
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">Settings <span class="caret"></span><span style="font-size:16px;" class="pull-right hidden-xs showopacity glyphicon glyphicon-cog"></span></a>
-                    <ul class="dropdown-menu forAnimate" role="menu">
-                        <li><a href="/Dashboard/EditProfile">Edit Profile</a></li>
-                        <li><a href="/Dashboard/EditSecurity">Edit Security</a></li>
-                    </ul>
-                </li>
-            </ul>
-        </div>
-    </div>
-</nav-->
+
+
+
+
 
 <script type="text/javascript">
 jQuery(function ($) {
