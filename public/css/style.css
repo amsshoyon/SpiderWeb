@@ -1,0 +1,96 @@
+
+
+@import url("basic.css");
+@import url("navbar.css");
+@import url("slider.css");
+@import url("services.css");
+@import url("hovereffect.css");
+@import url("team.css");
+@import url("contact.css");
+@import url("footer.css");
+@import url("chat.css");
+@import url("gototop.css");
+@import url("work_details.css");
+@import url("works.css");
+@import url("all_services.css");
+@import url("chat.css");
+
+
+/*===========================
+         features 
+============================ */
+
+
+.feature i {
+	font-size:90px;
+	color:#fff;
+	opacity:.7;
+}
+.feature h1 {
+   -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.feature h1:hover {
+	transform:scale(1.2);
+	
+}
+
+.hi-icon-effect i.fa:hover {
+	color:#fff;
+	opacity:1;
+	-webkit-transition: color 300ms, background-color 300ms;
+	-moz-transition: color 300ms, background-color 300ms;
+	-o-transition:  color 300ms, background-color 300ms;
+	transition:  color 300ms, background-color 300ms;
+}
+
+
+/*************************
+*******thought******
+**************************/
+
+.thought-text span{
+	font-size:2em;
+}
+
+.c-logo-part{
+	padding:25px 0;
+    filter: alpha(opacity=60);
+}
+.c-logo-part ul{
+	padding:0;
+	margin:0;
+	list-style:none;
+	text-align:center;
+}
+.c-logo-part ul li{
+	display:inline;
+	margin:0 25px;
+}
+.c-logo-part ul a{
+	display:inline-block;
+	padding:20px;
+	 -webkit-transition: all 0.5s ease 0s;
+    -moz-transition: all 0.5s ease 0s;
+    -ms-transition: all 0.5s ease 0s;
+    transition: all 0.5s ease 0s;
+}
+.c-logo-part ul li a:hover{
+	transform:scale(1.2);
+}
+
+
+
+/*************************
+*******animation******
+**************************/
+.custom-animated {
+  -webkit-animation-duration: .5s;
+  animation-duration: .5s;
+  -webkit-animation-fill-mode: both;
+  animation-fill-mode: both;
+}
+****/
+

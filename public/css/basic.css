@@ -1,0 +1,36 @@
+/* Primary Styles
+---------------------------------*/
+*{
+   font-family: 'Spectral', serif;
+   outline: 0 !important;
+}
+
+body,html{
+    height: 100%;
+}
+
+a{
+    text-decoration:none;
+}
+a:active, a:focus {
+  outline: 0;
+  border: none;
+  -moz-outline-style: none
+}
+
+a:hover{
+     text-decoration: none;
+}
+p{
+    white-space: pre-line;
+    text-align: justify;
+    text-justify: inter-word;
+}
+.parallax {
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.padding{
+  padding: 30px;
+}
