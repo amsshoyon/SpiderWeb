@@ -21,8 +21,8 @@
     @foreach($Portfolios as $Portfolio)
         <div class="column {{$Portfolio->catagory->name}}">
             <div class="portfolio pb-2 col-md-4 col-sm-6 col-xs-12">
-                <div class="box21 box_shadow" style="overflow: hidden;">
-                    <img src="/images/portfolio/cover/{{$Portfolio->cover}}" alt="">
+                <div class="box21 box_shadow" style="overflow: hidden; max-height: 250px;margin-bottom: 20px;">
+                    <img src="/images/portfolio/cover/{{$Portfolio->cover}}" alt="" style="width: 100%;">
                     <div class="box-content">
                         <h4 class="title">{{$Portfolio->title}}</h4>
                         <p class="description text-center">{{$Portfolio->description}}</p>
@@ -81,7 +81,7 @@ function w3RemoveClass(element, name) {
 
 // Add active class to the current button (highlight it)
 var btnContainer = document.getElementById("myBtnContainer");
-var btns = btnContainer.getElementsByClassName("btn");
+var btns = btnContainer.getElementsByClassName("portfolio_btn");
 for (var i = 0; i < btns.length; i++) {
   btns[i].addEventListener("click", function(){
     var current = document.getElementsByClassName("active");

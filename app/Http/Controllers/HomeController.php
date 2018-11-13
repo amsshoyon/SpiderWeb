@@ -11,6 +11,7 @@ use App\Catagory;
 use App\Image; 
 use App\Portfolio;
 use App\FeaturedServices;
+use App\Team;;
 
 class HomeController extends Controller
 {
@@ -32,10 +33,7 @@ class HomeController extends Controller
         $Sliders = Slider::get();
         $About = About::first();
         $Services = FeaturedServices::get();
-
-        return view('page.home')->with(compact('Portfolios','CatagoryList','Sliders','About', 'Services'));
-
-
-
+        $Teams = Team::get();
+        return view('page.home')->with(compact('Portfolios','CatagoryList','Sliders','About', 'Services', 'Teams'));
     }
 }

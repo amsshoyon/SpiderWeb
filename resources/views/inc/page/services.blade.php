@@ -6,7 +6,6 @@
           <div class="col-md-offset-2 col-md-8 text-center">
             <h1 class="font-bold">- We <span class="text-green">Serve</span> -</h1>
             <hr>
-            <p class="text-center">We’ve been building unique digital products, platforms, and experiences for the past 6 years.</p>
           </div>
         </div>
       </div>
@@ -38,7 +37,7 @@
                     </div>
                     <div class="col-sm-12 col-md-5">
                       <div class="screenshot wow bounceInRight">
-                        <img src="/images/services/{{$Service->image}}" class="img-responsive" alt="" />
+                        <img src="/images/services/{{$Service->image}}" class="img-responsive" alt="" style="width: 100%; max-height: 200px;" />
                       </div>
                     </div>
                   </div>

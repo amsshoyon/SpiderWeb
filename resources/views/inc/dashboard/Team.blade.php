@@ -1,6 +1,4 @@
 
-@include('inc.dashboard.image_upload_css')
-
 
 <div class="">
   <div class="row">
