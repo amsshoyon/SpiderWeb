@@ -1,5 +1,3 @@
-
-
 <section class="portfolio_section" id="portfolio">
 
     <div class="text-center container">
@@ -7,36 +5,88 @@
         <hr class="colorgraph">
     </div>
 
-     <div class="container text-center py-3 hidden_small">
-        <button class="btn btn-outline-primary filter-button btn-primary" data-filter="all">All</button>
+    <div class="text-center" id="myBtnContainer">
+      <button class="btn portfolio_btn active" onclick="filterSelection('all')"> Show all</button>
         @foreach($CatagoryList as $Catagory)
-            <button class="btn btn-outline-primary filter-button" data-filter="{{$Catagory->name}}">{{$Catagory->name}}</button>
+            <button class="btn portfolio_btn" onclick="filterSelection('{{$Catagory->name}}')"> {{$Catagory->name}}</button>
         @endforeach
+      
     </div>
+    <br>
+    <br>
 
+    <!-- Portfolio Gallery Grid -->
     <div class="container">
-      <div class="row">
-        @foreach($Portfolios as $Portfolio)
-        <div class="portfolio pb-2 col-md-4 col-sm-6 col-xs-12 filter {{$Portfolio->catagory->name}}">
-            <div class="box21" style="overflow: hidden;">
-                <img src="/images/portfolio/cover/{{$Portfolio->cover}}" alt="">
-                <div class="box-content">
-                    <h4 class="title">{{$Portfolio->title}}</h4>
-                    <p class="description text-center">{{$Portfolio->description}}</p>
-                    @if($Portfolio->link)
-                    <a class="read-more" href="{{$Portfolio->link}}" target="_blank">Live Preview</a>
-                    @else
-                    {{link_to_route('Portfolio.show',"Screenshoots",[$Portfolio->id],['class'=>'read-more'])}}
-                    @endif
+
+    @foreach($Portfolios as $Portfolio)
+        <div class="column {{$Portfolio->catagory->name}}">
+            <div class="portfolio pb-2 col-md-4 col-sm-6 col-xs-12">
+                <div class="box21 box_shadow" style="overflow: hidden;">
+                    <img src="/images/portfolio/cover/{{$Portfolio->cover}}" alt="">
+                    <div class="box-content">
+                        <h4 class="title">{{$Portfolio->title}}</h4>
+                        <p class="description text-center">{{$Portfolio->description}}</p>
+                        @if($Portfolio->link)
+                        <a class="read-more" href="{{$Portfolio->link}}" target="_blank">Live Preview</a>
+                        @else
+                        {{link_to_route('Portfolio.show',"Screenshoots",[$Portfolio->id],['class'=>'read-more'])}}
+                        @endif
+                    </div>
                 </div>
             </div>
         </div>
-        @endforeach
+    @endforeach
 
-
-
-        
+    <!-- END GRID -->
     </div>
-    </div>
-
 </section>
+
+<script>
+filterSelection("all") // Execute the function and show all columns
+function filterSelection(c) {
+  var x, i;
+  x = document.getElementsByClassName("column");
+  if (c == "all") c = "";
+  // Add the "show" class (display:block) to the filtered elements, and remove the "show" class from the elements that are not selected
+  for (i = 0; i < x.length; i++) {
+    w3RemoveClass(x[i], "show");
+    if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+  }
+}
+
+// Show filtered elements
+function w3AddClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    if (arr1.indexOf(arr2[i]) == -1) {
+      element.className += " " + arr2[i];
+    }
+  }
+}
+
+// Hide elements that are not selected
+function w3RemoveClass(element, name) {
+  var i, arr1, arr2;
+  arr1 = element.className.split(" ");
+  arr2 = name.split(" ");
+  for (i = 0; i < arr2.length; i++) {
+    while (arr1.indexOf(arr2[i]) > -1) {
+      arr1.splice(arr1.indexOf(arr2[i]), 1);
+    }
+  }
+  element.className = arr1.join(" ");
+}
+
+// Add active class to the current button (highlight it)
+var btnContainer = document.getElementById("myBtnContainer");
+var btns = btnContainer.getElementsByClassName("btn");
+for (var i = 0; i < btns.length; i++) {
+  btns[i].addEventListener("click", function(){
+    var current = document.getElementsByClassName("active");
+    current[0].className = current[0].className.replace(" active", "");
+    this.className += " active";
+  });
+}
+</script>

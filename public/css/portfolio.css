@@ -9,6 +9,47 @@
 }
 
 
+.column {
+    display: none; /* Hide columns by default */
+}
+
+/* Clear floats after rows */
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+/* Content */
+.content {
+    background-color: white;
+}
+
+/* The "show" class is added to the filtered elements */
+.show {
+    display: block;
+}
+
+/* Style the buttons */
+.portfolio_btn {
+  border: none;
+  outline: none;
+  padding: 12px 16px;
+  background-color: white;
+  cursor: pointer;
+}
+
+/* Add a grey background color on mouse-over */
+.portfolio_btn:hover {
+  background-color: #ddd;
+}
+
+/* Add a dark background color to the active button */
+.portfolio_btn.active {
+  background-color: #666;
+   color: white;
+}
+
 .box21{text-align:center;position:relative}
 .box21:after,.box21:before{content:"";width:2px;height:2px;border-radius:50%;background:rgba(0,0,0,.35);position:absolute;top:50%;left:50%;-webkit-transform:scale(0);-moz-transform:scale(0);-ms-transform:scale(0);-o-transform:scale(0);transform:scale(0)}
 .box21:hover:after,.box21:hover:before{-webkit-transform:scale(400);-moz-transform:scale(400);-ms-transform:scale(400);-o-transform:scale(400);transform:scale(400)}
